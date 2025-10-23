@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.opportunity-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Keep heading styles */
+.opportunity-card h3 {
+  margin: 0 0 10px;
+  color: #0078d7;
+}
+
+/* New: Button container fixed at the bottom */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: auto;
+}
+
+/* Button styling */
+.card-actions a {
+  text-decoration: none;
+  color: white;
+  background: #0078d7;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.card-actions a:hover {
+  background: #005fa3;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#loadMoreBtn {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#loadMoreBtn:hover {
+  background-color: #0078d7;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
